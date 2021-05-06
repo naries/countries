@@ -1,0 +1,7 @@
+.country-section {
+    margin: 2em 0;
+
+    @media(max-width: $small-device) {
+        margin: .2em 0;
+    }
+}

@@ -1,0 +1,109 @@
+$small-device: 478px;
+
+$light-base-color: hsl(0, 0%, 98%) !default;
+$dark-base-color: hsl(207, 26%, 17%);
+$dark-base-element: hsl(209, 23%, 22%);
+$dark-color: hsl(0, 0%, 100%);
+$light-color: hsl(207, 26%, 17%);
+$light-base-element: hsl(0, 0%, 100%);
+$normal-white: hsl(0, 0%, 100%);
+
+$light-shadow: #ccc;
+$dark-shadow: #222;
+
+@import 'styles/bar';
+@import 'styles/searchandfilter';
+@import 'styles/country-section';
+@import 'styles/country';
+@import 'styles/details';
+@import 'styles/border-countries';
+
+body {
+  box-sizing: border-box;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  
+  .light, .dark {
+    min-height: 100vh;
+  }
+
+  .light{
+    background-color: $light-base-color;
+    color: $light-color;
+
+    .bar {
+      background-color: $light-base-element;
+      color: $light-color;
+      box-shadow: 0 0 10px $light-shadow;
+    }
+
+    .search, .filter {
+      background-color: $light-base-element;
+      box-shadow: 0 0 10px $light-shadow;
+      color: $light-color;
+    
+      .drop-box {
+        box-shadow: 0 0 10px $light-shadow;
+        background-color: $light-base-element;
+        color: $light-color;
+      }
+    }
+    .country {
+      background-color: $light-base-element;
+      box-shadow: 0 0 10px $light-shadow;
+      color: $light-color;
+    }
+
+    button {
+      background-color: $light-base-element;
+      box-shadow: 0 0 10px $light-shadow;
+      color: $light-color
+    }
+  }
+
+  .dark {
+    background-color: $dark-base-color;
+    color: $dark-color;
+    box-shadow: 0 0 10px $dark-shadow;
+
+    
+    .bar {
+      background-color: $dark-base-element;
+      color: $dark-color;
+    }
+
+    .search, .filter {
+      background-color: $dark-base-element;
+      box-shadow: 0 0 10px $dark-shadow;
+      color: $dark-color;
+
+      .drop-box{
+        background-color: $dark-base-element;
+        box-shadow: 0 0 10px $dark-shadow;
+        color: $dark-color;
+      }
+    }
+
+    .country {
+      background-color: $dark-base-element;
+      color: $dark-color;
+      box-shadow: 0 0 10px $dark-shadow;
+    }
+
+    button {
+      background-color: $dark-base-element;
+      box-shadow: 0 0 10px $dark-shadow;
+      color: $dark-color;
+    }
+  }
+
+
+  .inner {
+    padding: 3em 5em;
+
+    @media(max-width: $small-device) {
+      padding: .3em .5em;
+    }
+  }
+}

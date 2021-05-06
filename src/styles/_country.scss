@@ -1,0 +1,38 @@
+.country {
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 4px;
+    margin: 2.1em;
+
+    .flag-box {
+        height: 200px;
+        width: 300px;
+        
+        img {
+            object-fit: cover;
+            width: 300px;
+            height: 200px;
+        }
+    }
+
+    .details {
+        font-weight: lighter;
+
+        
+        .details-name{
+            width: 12em;
+            font-weight: 600;
+            font-size: 18px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        span {
+            font-weight: normal;
+        }
+        
+        padding: 2em;
+        padding-top: 1em;
+    }
+}
