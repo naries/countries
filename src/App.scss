@@ -58,7 +58,14 @@ body {
     button {
       background-color: $light-base-element;
       box-shadow: 0 0 10px $light-shadow;
-      color: $light-color
+      color: $light-color;
+      &.drop-button {
+        box-shadow: none;
+      }
+    }
+
+    .search-input{
+      color: $light-color;
     }
   }
 
@@ -95,6 +102,14 @@ body {
       background-color: $dark-base-element;
       box-shadow: 0 0 10px $dark-shadow;
       color: $dark-color;
+
+      &.drop-button {
+        box-shadow: none;
+      }
+    }
+
+    .search-input {
+      color: $dark-color;
     }
   }
 
@@ -105,5 +120,6 @@ body {
     @media(max-width: $small-device) {
       padding: .3em .5em;
     }
+
   }
 }

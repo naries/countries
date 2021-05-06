@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Country from "./Country"
 
 const CountrySection = ({ url, setView }) => {
+    console.log(url)
     const [countries, setCountries] = useState([])
     const [error, setError] = useState('')
 

@@ -23,12 +23,12 @@ const SearchAndFilter = ({ setRegion, setSearchItem }) => {
                 <FiChevronDown color="#666" className="filter-icon"/>
             </div>
             {showDrop && <div className="drop-box">
-                <button className="drop-button" onClick={() => setRegion('africa')}>Africa</button>
-                <button className="drop-button" onClick={() => setRegion('america')}>America</button>
-                <button className="drop-button" onClick={() => setRegion('asia')}>Asia</button>
-                <button className="drop-button" onClick={() => setRegion('europe')}>Europe</button>
-                <button className="drop-button" onClick={() => setRegion('oceania')}>Oceania</button>
-                <button className="drop-button" onClick={() => setRegion('all')}>All</button>
+                <button className="drop-button" onClick={() => {setSearchItem(''); setRegion('africa')}}>Africa</button>
+                <button className="drop-button" onClick={() => {setSearchItem(''); setRegion('america')}}>America</button>
+                <button className="drop-button" onClick={() => {setSearchItem(''); setRegion('asia')}}>Asia</button>
+                <button className="drop-button" onClick={() => {setSearchItem(''); setRegion('europe')}}>Europe</button>
+                <button className="drop-button" onClick={() => {setSearchItem(''); setRegion('oceania')}}>Oceania</button>
+                <button className="drop-button" onClick={() => {setSearchItem(''); setRegion('all')}}>All</button>
             </div>}
         </div>
     </div>

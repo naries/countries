@@ -56,6 +56,9 @@
 
     .details-space {
         width: 50%;
+        @media screen and (max-width: $small-device) {
+            width: unset;
+        }
         font-weight: lighter;
 
 
@@ -68,6 +71,11 @@
         .details-general{
             display: flex;
             justify-content: space-between;
+            
+            @media(max-width: $small-device) {
+                display: block;
+            }
+            
         }
 
         span {

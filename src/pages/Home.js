@@ -11,36 +11,35 @@ const Home = ({ setTheme, theme }) => {
 
 
     let url;
-    switch (region) {
-        case 'europe':
-            url = "https://restcountries.eu/rest/v2/region/europe";
-            break;
-        case 'africa':
-            url = "https://restcountries.eu/rest/v2/region/africa";
-            break;
-        case 'oceania':
-            url = "https://restcountries.eu/rest/v2/region/oceania";
-            break;
-        case 'asia':
-            url = "https://restcountries.eu/rest/v2/region/asia";
-            break;
-        case 'amehsl(207, 26%, 17%)ricas':
-            url = "https://restcountries.eu/rest/v2/region/americas";
-            break;
-        default: 
-            url="https://restcountries.eu/rest/v2/all"
-    }
-
 
     
     switch (searchItem) {
         case '':
-            url="https://restcountries.eu/rest/v2/all";
+            switch (region) {
+                case 'europe':
+                    url = "https://restcountries.eu/rest/v2/region/europe";
+                    break;
+                case 'africa':
+                    url = "https://restcountries.eu/rest/v2/region/africa";
+                    break;
+                case 'oceania':
+                    url = "https://restcountries.eu/rest/v2/region/oceania";
+                    break;
+                case 'asia':
+                    url = "https://restcountries.eu/rest/v2/region/asia";
+                    break;
+                case 'amehsl(207, 26%, 17%)ricas':
+                    url = "https://restcountries.eu/rest/v2/region/americas";
+                    break;
+                default: 
+                    url="https://restcountries.eu/rest/v2/all"
+            }
             break;
         default: 
             url=`https://restcountries.eu/rest/v2/name/${searchItem}`
             break;
     }
+
     return <>
         <Bar setTheme = {setTheme} theme={theme}/>
         <div className="inner">
